@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Usando o Chartjs</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div>
+        <canvas id="myChart"></canvas>
+      </div>
+      <script>
+        const labels = [
+    '12:00',
+    '13:00',
+     '14:00',
+    '15:00',
+    '16:00',
+    '17:00',
+    ];
+    
+    
+    const data = {
+    labels: labels,
+    datasets: [{
+    label: 'Temperatura',
+    backgroundColor: 'rgb(255, 99, 132)',
+    borderColor: 'rgb(255, 99, 132)',
+    data: [20+10, 30, 40-12, 50-25, 60-39,70-48],
+    },
+    {
+    label: 'Umidade',
+    backgroundColor: 'rgb(0, 0, 255)',
+    borderColor: 'rgb(0, 0, 255)',
+    data: [20+60, 30+51, 40+40, 50+35, 60+25, 70+11],
+    }
+    ]}; 
+    
+    const config = {
+    type: 'line',
+    data: data,
+    options:  {}
+    }
+    
+      </script>
+      
+      
+</body>
+</html>
+<script>
+    const myChart = new Chart(
+    document. getElementById( 'myChart'),
+    config
+    );
+    </script> 
